@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+hr {
+  border: none; /* Remove default border */
+  height: 1px; /* Set height */
+  background-color: #ccc; /* Set color */
+  margin: 20px 0; /* Add some space around */
+}
+/* App.css */
+.main-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between the grid and filters */
+}
+
+.portfolio-grid {
+  flex: 3; /* Allow the grid to take up more space */
+}
+
+.category-container {
+  flex: 1; /* Make the category filter take less space */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: flex-end; /* Align to the right */
+  margin: 20px 0; /* Add margin for spacing */
 }

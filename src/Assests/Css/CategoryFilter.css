@@ -1,0 +1,27 @@
+.category-filter {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .category-filter button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .category-filter button.active {
+    font-weight: bold;
+    color: #000;
+  }
+  /* CategoryFilter.css */
+.category-container {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  margin: 20px 0; /* Add margin for spacing */
+}
+  

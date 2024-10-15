@@ -1,0 +1,6 @@
+/* PortfolioGrid.css */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Limit to 3 cards per row */
+  gap: 20px; /* Spacing between cards */
+}

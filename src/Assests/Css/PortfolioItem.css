@@ -1,0 +1,21 @@
+.portfolio-item {
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto; /* Ensures the image maintains its aspect ratio */
+  object-fit: cover; /* Ensures the image covers the item area without distortion */
+}
+
+.portfolio-item h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.portfolio-item p {
+  margin: 10px 0 0;
+}

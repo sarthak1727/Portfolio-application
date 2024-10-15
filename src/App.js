@@ -1,25 +1,58 @@
-import logo from './logo.svg';
+// App.js
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import CategoryFilter from './components/CategoryFilter';
+import PortfolioGrid from './components/PortfolioGrid';
+import PortfolioDetail from './components/PortfolioDetail';
+import { fetchPortfolios } from './api';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [portfolios, setPortfolios] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  useEffect(() => {
+    const loadPortfolios = async () => {
+      const data = await fetchPortfolios();
+      setPortfolios(data);
+      
+      const uniqueCategories = ['All', ...new Set(data.flatMap(item => item.categories))];
+      setCategories(uniqueCategories);
+    };
+
+    loadPortfolios();
+  }, []);
+
+  const filteredPortfolios = selectedCategory === 'All'
+    ? portfolios
+    : portfolios.filter(item => item.categories.includes(selectedCategory));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <h1>Portfolio</h1> {/* Portfolio heading */}
+        <hr /> {/* Horizontal line */}
+        <Header />
+        <div className="category-container"> {/* Wrapper for right alignment */}
+          <CategoryFilter 
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onSelectCategory={setSelectedCategory}
+          />
+        </div>
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <PortfolioGrid portfolios={filteredPortfolios} />
+            </main>
+          } />
+          <Route path="/portfolio/:id" element={<PortfolioDetail portfolios={portfolios} />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
