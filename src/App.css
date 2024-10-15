@@ -55,3 +55,110 @@ hr {
     grid-template-columns: 1fr; /* 1 card per row */
   }
 }
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+}
+
+.my-works-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+  margin-top: 10px; /* Adds some space above the heading */
+}
+
+.my-works-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+  margin-top: 10px; /* Adds space above the heading */
+}
+
+.my-works-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: grey; /* Sets the heading color to grey */
+}
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+  margin-top: 0px; /* Reduced space above the heading */
+}
+
+.my-works-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: grey; /* Sets the heading color to grey */
+}
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+  margin-top: 5px; /* Reduced space above the heading */
+}
+
+.my-works-heading {
+  font-size: 1.2em; /* Reduced font size */
+  font-weight: bold;
+  color: grey; /* Sets the heading color to grey */
+}
+
+/* Style for the Portfolio heading */
+h1 {
+  font-size: 2.2em; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 10px; /* Adds some space below the heading */
+}
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+  margin-top: 5px; /* Reduced space above the heading */
+}
+
+.my-works-heading {
+  font-size: 1.2em; /* Reduced font size */
+  font-weight: bold;
+  color: grey; /* Sets the heading color to grey */
+}
+
+/* Style for the Portfolio heading */
+h1 {
+  font-size: 2.2em; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 10px; /* Adds space below the Portfolio heading */
+}
+
+.custom-hr {
+  margin: 0; /* Removes margin around the horizontal line */
+}
+
+.my-works-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  margin-right: 20px; /* Adds some space from the edge */
+  margin-top: 5px; /* Minimal space above My Works heading */
+}
+
+.my-works-heading {
+  font-size: 1.2em; /* Reduced font size */
+  font-weight: bold;
+  color: grey; /* Sets the heading color to grey */
+}
+

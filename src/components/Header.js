@@ -2,12 +2,12 @@
 import React from 'react';
 import '../Assests/Css/Header.css';
 
-const Header = () => (
-  <header className="header">
-    <nav>
-      <span className="title">My Works</span>
-    </nav>
-  </header>
+const Header = ({ showMyWorks }) => (
+  <header className="header">
+    <nav>
+      {showMyWorks && <span className="title">My Works</span>} {/* Conditionally render title */}
+    </nav>
+  </header>
 );
 
 export default Header;
