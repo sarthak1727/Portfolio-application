@@ -1,4 +1,3 @@
-// components/CategoryFilter.js
 import React from 'react';
 import '../Assests/Css/CategoryFilter.css';
 

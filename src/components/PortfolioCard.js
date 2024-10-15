@@ -1,4 +1,3 @@
-// components/PortfolioCard.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Assests/Css/PortfolioCard.css';

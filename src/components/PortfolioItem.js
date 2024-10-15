@@ -1,4 +1,3 @@
-// components/PortfolioItem.js
 import React from 'react';
 import '../Assests/Css/PortfolioItem.css'
 

@@ -1,4 +1,3 @@
-// components/PortfolioGrid.js
 import React from 'react';
 import PortfolioCard from './PortfolioCard';
 import '../Assests/Css/PortfolioGrid.css';

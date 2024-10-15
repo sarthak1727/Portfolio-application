@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import Header from './components/Header';
 import CategoryFilter from './components/CategoryFilter';
 import PortfolioGrid from './components/PortfolioGrid';
 import PortfolioDetail from './components/PortfolioDetail';
 import { fetchPortfolios } from './api';
 import './App.css';
 
-// Component to conditionally render the header and category filter
 const AppContent = ({ portfolios, categories, selectedCategory, setSelectedCategory }) => {
   const location = useLocation();
 
@@ -17,14 +15,14 @@ const AppContent = ({ portfolios, categories, selectedCategory, setSelectedCateg
 
   return (
     <div className="app">
-      {location.pathname === '/' && ( // Only show this section on the home page
+      {location.pathname === '/' && (
         <>
-          <h1>Portfolio</h1> {/* Portfolio heading */}
-          <hr className="custom-hr" /> {/* Horizontal line */}
-          <div className="my-works-container"> {/* Container to align My Works to the right */}
-            <h2 className="my-works-heading">My Works</h2> {/* My Works heading */}
+          <h1>Portfolio</h1> 
+          <hr className="custom-hr" /> 
+          <div className="my-works-container"> 
+            <h2 className="my-works-heading">My Works</h2> 
           </div>
-          <div className="category-container"> {/* Wrapper for right alignment */}
+          <div className="category-container"> 
             <CategoryFilter 
               categories={categories}
               selectedCategory={selectedCategory}
@@ -62,8 +60,7 @@ const App = () => {
     loadPortfolios();
   }, []);
 
-  const [loading, setLoading] = useState(true); // Initialize loading state
-
+  const [loading, setLoading] = useState(true); 
   useEffect(() => {
     const loadPortfolios = async () => {
       try {
@@ -75,7 +72,7 @@ const App = () => {
       } catch (error) {
         console.error("Failed to fetch portfolios:", error);
       } finally {
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       }
     };
 

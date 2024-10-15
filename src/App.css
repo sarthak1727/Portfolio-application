@@ -1,5 +1,4 @@
-
-body {
+.body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -11,33 +10,29 @@ body {
   padding: 20px;
 }
 
-h1 {
-  color: #333;
+.hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
 }
 
-hr {
-  border: none; /* Remove default border */
-  height: 1px; /* Set height */
-  background-color: #ccc; /* Set color */
-  margin: 20px 0; /* Add some space around */
-}
-/* App.css */
 .main-content {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between the grid and filters */
+  display: flex;
+  justify-content: space-between;
 }
 
 .portfolio-grid {
-  flex: 3; /* Allow the grid to take up more space */
+  flex: 3;
 }
 
 .category-container {
-  flex: 1; /* Make the category filter take less space */
+  flex: 1;
   display: flex;
-  justify-content: flex-end; /* Align to the right */
-  margin: 20px 0; /* Add margin for spacing */
+  justify-content: flex-end;
+  margin: 20px 0;
 }
-/* This can go in your main CSS file (e.g., App.css) */
+
 @media (max-width: 1200px) {
   .portfolio-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -52,130 +47,47 @@ hr {
 
 @media (max-width: 600px) {
   .portfolio-grid {
-    grid-template-columns: 1fr; /* 1 card per row */
+    grid-template-columns: 1fr;
   }
 }
 
 .my-works-container {
   display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: 5px;
 }
 
 .my-works-heading {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
+  color: grey;
 }
 
-.my-works-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
-  margin-top: 10px; /* Adds some space above the heading */
-}
-
-.my-works-heading {
-  font-size: 1.5em;
+.h1 {
+  color: #333;
+  font-size: 2.2em;
   font-weight: bold;
-}
-
-.my-works-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
-  margin-top: 10px; /* Adds space above the heading */
-}
-
-.my-works-heading {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: grey; /* Sets the heading color to grey */
-}
-
-.my-works-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
-  margin-top: 0px; /* Reduced space above the heading */
-}
-
-.my-works-heading {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: grey; /* Sets the heading color to grey */
-}
-
-.my-works-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
-  margin-top: 5px; /* Reduced space above the heading */
-}
-
-.my-works-heading {
-  font-size: 1.2em; /* Reduced font size */
-  font-weight: bold;
-  color: grey; /* Sets the heading color to grey */
-}
-
-/* Style for the Portfolio heading */
-h1 {
-  font-size: 2.2em; /* Increased font size */
-  font-weight: bold;
-  margin-bottom: 10px; /* Adds some space below the heading */
-}
-
-.my-works-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
-  margin-top: 5px; /* Reduced space above the heading */
-}
-
-.my-works-heading {
-  font-size: 1.2em; /* Reduced font size */
-  font-weight: bold;
-  color: grey; /* Sets the heading color to grey */
-}
-
-/* Style for the Portfolio heading */
-h1 {
-  font-size: 2.2em; /* Increased font size */
-  font-weight: bold;
-  margin-bottom: 10px; /* Adds space below the Portfolio heading */
+  margin-bottom: 10px;
 }
 
 .custom-hr {
-  margin: 0; /* Removes margin around the horizontal line */
-}
-
-.my-works-container {
-  display: flex;
-  justify-content: flex-end; /* Aligns the content to the right */
-  margin-right: 20px; /* Adds some space from the edge */
-  margin-top: 5px; /* Minimal space above My Works heading */
-}
-
-.my-works-heading {
-  font-size: 1.2em; /* Reduced font size */
-  font-weight: bold;
-  color: grey; /* Sets the heading color to grey */
+  margin: 0;
 }
 
 .loading {
-  position: fixed; /* Position fixed to cover the entire viewport */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  width: 50px; /* Size of the spinner */
-  height: 50px; /* Size of the spinner */
-  border: 5px solid #f3f3f3; /* Light gray border */
-  border-top: 5px solid #3498db; /* Blue top border */
-  border-radius: 50%; /* Make it circular */
-  animation: spin 1s linear infinite; /* Spin animation */
-  transform: translate(-50%, -50%); /* Center the spinner */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
 }
 
-/* Spin animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

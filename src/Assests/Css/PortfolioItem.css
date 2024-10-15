@@ -7,8 +7,8 @@
 
 .portfolio-item img {
   width: 100%;
-  height: auto; /* Ensures the image maintains its aspect ratio */
-  object-fit: cover; /* Ensures the image covers the item area without distortion */
+  height: auto;
+  object-fit: cover;
 }
 
 .portfolio-item h3 {
