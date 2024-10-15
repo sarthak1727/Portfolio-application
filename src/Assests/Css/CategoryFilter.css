@@ -1,27 +1,22 @@
 .category-filter {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .category-filter button {
-    background: none;
-    border: none;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .category-filter button.active {
-    font-weight: bold;
-    color: #000;
-  }
-  /* CategoryFilter.css */
-.category-container {
   display: flex;
-  justify-content: flex-end; /* Align to the right */
-  margin: 20px 0; /* Add margin for spacing */
+  justify-content: flex-start; /* Align buttons to the left */
+  margin: 20px 0;
+  overflow-x: auto; /* Allows horizontal scrolling if buttons exceed container width */
 }
-  
+
+.category-filter button {
+  background: none;
+  border: 1px solid #666; /* Add a border for better visibility */
+  padding: 5px 10px;
+  margin: 0 5px; /* Add margin on left and right */
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.category-filter button.active {
+  font-weight: bold;
+  color: #000;
+  background-color: #f0f0f0; /* Change background color for active button */
+}
