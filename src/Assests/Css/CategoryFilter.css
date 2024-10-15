@@ -3,20 +3,39 @@
   justify-content: flex-start; /* Align buttons to the left */
   margin: 20px 0;
   overflow-x: auto; /* Allows horizontal scrolling if buttons exceed container width */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if there's not enough space */
 }
 
 .category-filter button {
   background: none;
   border: 1px solid #666; /* Add a border for better visibility */
-  padding: 5px 10px;
-  margin: 0 5px; /* Add margin on left and right */
+  padding: 10px 15px; /* Increased padding for better touch targets */
+  margin: 5px; /* Uniform margin around buttons */
   cursor: pointer;
   font-size: 14px;
   color: #666;
+  flex: 1 1 auto; /* Allow buttons to grow and shrink */
+  min-width: 100px; /* Set a minimum width for buttons */
+  max-width: 150px; /* Set a maximum width for buttons */
 }
 
 .category-filter button.active {
   font-weight: bold;
   color: #000;
   background-color: #f0f0f0; /* Change background color for active button */
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 600px) {
+  .category-filter button {
+    font-size: 12px; /* Smaller text on small screens */
+    padding: 8px 12px; /* Adjust padding */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .category-filter button {
+    font-size: 13px; /* Slightly larger text for medium screens */
+    padding: 9px 14px; /* Adjust padding */
+  }
 }
