@@ -4,9 +4,9 @@ import '../Assests/Css/Header.css';
 
 const Header = ({ showMyWorks }) => (
   <header className="header">
-    <nav>
-      {showMyWorks && <span className="title">My Works</span>} {/* Conditionally render title */}
-    </nav>
+{/*      <nav>
+      {showMyWorks && <span className="title">Myy Works</span>}
+    </nav> */}
   </header>
 );
 

@@ -39,7 +39,7 @@ const AppContent = ({ portfolios, categories, selectedCategory, setSelectedCateg
             <PortfolioGrid portfolios={filteredPortfolios} />
           </main>
         } />
-        <Route path="/portfolio/:id" element={<PortfolioDetail portfolios={portfolios} />} />
+        <Route path="/portfolio/:id/:title" element={<PortfolioDetail portfolios={portfolios} />} />
       </Routes>
     </div>
   );
@@ -62,16 +62,40 @@ const App = () => {
     loadPortfolios();
   }, []);
 
+  const [loading, setLoading] = useState(true); // Initialize loading state
+
+  useEffect(() => {
+    const loadPortfolios = async () => {
+      try {
+        const data = await fetchPortfolios();
+        setPortfolios(data);
+
+        const uniqueCategories = ['All', ...new Set(data.flatMap(item => item.categories))];
+        setCategories(uniqueCategories);
+      } catch (error) {
+        console.error("Failed to fetch portfolios:", error);
+      } finally {
+        setLoading(false); // Set loading to false after data is fetched
+      }
+    };
+
+    loadPortfolios();
+  }, []);
+
+
   return (
     <Router>
-      <Header />
+    {!loading ? (
       <AppContent
         portfolios={portfolios}
         categories={categories}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-    </Router>
+    ) : (
+      <div className="loading"></div> 
+    )}
+  </Router>
   );
 };
 

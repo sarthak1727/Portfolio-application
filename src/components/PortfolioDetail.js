@@ -9,9 +9,27 @@ const PortfolioDetail = ({ portfolios }) => {
 
   if (!portfolio) return <div>Portfolio not found</div>;
 
+  // Find the current index of the portfolio
+  const currentIndex = portfolios.findIndex(p => p.id === parseInt(id));
+  
+  // Get the previous and next portfolio indices
+  const prevPortfolio = portfolios[currentIndex - 1];
+  const nextPortfolio = portfolios[currentIndex + 1];
+
   return (
     <div className="portfolio-detail">
-      <Link to="/" className="back-button">← Back</Link>
+      <div className="navigation-buttons">
+  <Link to="/" className="back-button">Close</Link>
+  <div className="nav-right">
+    {prevPortfolio && (
+      <Link to={`/portfolio/${prevPortfolio.id}/${prevPortfolio.title}`} className="prev-button">← Previous</Link>
+    )}
+    {nextPortfolio && (
+      <Link to={`/portfolio/${nextPortfolio.id}/${nextPortfolio.title}`} className="next-button">Next →</Link>
+    )}
+  </div>
+</div>
+
       <h2>{portfolio.title}</h2>
       <img src={portfolio.featured_image} alt={portfolio.title} className="detail-image" />
       <div className="detail-content">
@@ -22,9 +40,6 @@ const PortfolioDetail = ({ portfolios }) => {
           }}
         />
       </div>
-      {portfolio.clientLogo && (
-        <img src={portfolio.clientLogo} alt={`${portfolio.title} client`} className="detail-logo" />
-      )}
     </div>
   );
 };
