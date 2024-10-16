@@ -5,7 +5,6 @@ import '../Assests/Css/PortfolioDetail.css';
 const PortfolioDetail = ({ portfolios }) => {
     const { id } = useParams();
     const portfolio = portfolios.find(p => p.id === parseInt(id));
-
     if (!portfolio) return <div>Portfolio not found</div>;
 
     const currentIndex = portfolios.findIndex(p => p.id === parseInt(id));
